@@ -13,11 +13,12 @@ public class Lslist implements Slist {
     }
 
     public void addAfter(Object item) {
-        Node <Object> holder = new Node<Object>(null);
+        if(curr == tail){
+            Node <Object> newEnd = new Node<Object>(null);
+        }
+        Node <Object> holder = new Node<Object>(item);
         curr.next.next = holder.next;
         curr.next=holder;
-        holder.value = item;
-        
     }
 
     public void addBefore(Object item) {
