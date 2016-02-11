@@ -1,49 +1,50 @@
-
 public class Lslist implements Slist {
-    private Node head;         // Pointer to list header
-    private Node tail;         // Pointer to last element
-    private Node curr;         // Pointer to current element
-    private int listSize;      // Size of list
-    
-    Lslist(int size) { 
-        this(); 
-        }     // Constructor -- Ignore size
-    Lslist() { clear(); }
-    Lslist list = new Lslist();
-    
-    public void clear(){
+    private Node<Object> head; // Pointer to list header
+    private Node<Object> tail; // Pointer to last element
+    private Node<Object> curr; // Pointer to current element
+    private int listSize; // Size of list
+
+
+    public void clear() {
+        curr = tail; // Create trailer
+        tail = new Node<Object>(null);
+        head = tail; // Create header
+        listSize = 0;
+    }
+
+    public void addAfter(Object item) {
+        Node <Object> holder = new Node<Object>(null);
+        curr.next.next = holder.next;
+        curr.next=holder;
+        holder.value = item;
         
     }
-    
-    public void addAfter(Object item){
-        
+
+    public void addBefore(Object item) {
+
     }
-    
-    public void addBefore(Object item){
-        
+
+    public void remove() {
+
     }
-    
-    public void remove(){
-        
-    }
-    
-    public boolean prev(){
+
+    public boolean prev() {
         return false;
-        
+
     }
-    
-    public boolean next(){
+
+    public boolean next() {
         return false;
-        
+
     }
-    
-    public int length(){
+
+    public int length() {
         return 0;
-        
+
     }
-    
-    public Object getValue() throws IllegalStateException{
+
+    public Object getValue() throws IllegalStateException {
         return null;
-        
+
     }
 }
