@@ -1,7 +1,11 @@
 
 public class Lslist {
+    Lslist list = new Lslist();
+    
     public void clear(){
-        
+        for(int i=0; i<list.length(); i++){
+            list.remove();
+        }
     }
     
     public void addAfter(Object item){
