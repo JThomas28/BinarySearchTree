@@ -1,5 +1,9 @@
 
-public class Lslist {
+public class Lslist implements Slist {
+    private Link head;         // Pointer to list header
+    private Link tail;         // Pointer to last element
+    private Link curr;         // Access to current element
+    private int listSize;      // Size of list
     Lslist list = new Lslist();
     
     public void clear(){
