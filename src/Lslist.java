@@ -1,9 +1,14 @@
 
 public class Lslist implements Slist {
-    private Link head;         // Pointer to list header
-    private Link tail;         // Pointer to last element
-    private Link curr;         // Access to current element
+    private Node head;         // Pointer to list header
+    private Node tail;         // Pointer to last element
+    private Node curr;         // Pointer to current element
     private int listSize;      // Size of list
+    
+    Lslist(int size) { 
+        this(); 
+        }     // Constructor -- Ignore size
+    Lslist() { clear(); }
     Lslist list = new Lslist();
     
     public void clear(){
