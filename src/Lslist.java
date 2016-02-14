@@ -13,9 +13,6 @@ public class Lslist implements Slist {
     }
 
     public void addAfter(Object item) {
-        if(curr == tail){
-            Node <Object> newEnd = new Node<Object>(null);
-        }
         Node <Object> holder = new Node<Object>(item);
         curr.next.next = holder.next;
         curr.next=holder;
