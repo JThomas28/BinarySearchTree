@@ -8,9 +8,7 @@ public class LslistTest {
     @Test
     public void testClearLargeList() {
         Lslist list = new Lslist();
-        
         list.clear();
-        
     }
 
 }

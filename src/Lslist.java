@@ -1,10 +1,9 @@
 import java.util.LinkedList;
 
 public class Lslist implements Slist {
-    private LinkedList<Object> list;
-
+    
     private Object currentElement;
-
+    
     private Node<Object> head; // Pointer to list header
     private Node<Object> tail; // Pointer to last element
     private Node<Object> curr; // Pointer to current element
@@ -32,10 +31,11 @@ public class Lslist implements Slist {
     }
 
     public void addBefore(Object item) {
+        
     }
 
     public void remove() {
-        list.remove(currentElement);
+        
     }
 
     public boolean prev() {
@@ -61,7 +61,7 @@ public class Lslist implements Slist {
     }
 
     public Object getValue() throws IllegalStateException {
-        if (list.isEmpty()) {
+        if (Lslist.isEmpty()) {
             throw new IllegalStateException();
         }
         else {
