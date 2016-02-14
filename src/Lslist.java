@@ -1,15 +1,20 @@
+import java.util.LinkedList;
+
 public class Lslist implements Slist {
+    private LinkedList <Object> list;
+    
+    private Object currentElement;
     private Node<Object> head; // Pointer to list header
     private Node<Object> tail; // Pointer to last element
     private Node<Object> curr; // Pointer to current element
     private int listSize; // Size of list
 
-
+    public Lslist(){
+        
+    }
+    //list: <a,b,C,d>
     public void clear() {
-        curr = tail; // Create trailer
-        tail = new Node<Object>(null);
-        head = tail; // Create header
-        listSize = 0;
+        list.clear();
     }
 
     public void addAfter(Object item) {
