@@ -32,7 +32,6 @@ public class Lslist implements Slist {
     }
 
     public void addBefore(Object item) {
-        
     }
 
     public void remove() {
@@ -49,8 +48,6 @@ public class Lslist implements Slist {
             curr = previous;
             return true;
         }
-        
-
     }
 
     public boolean next() {
