@@ -27,7 +27,7 @@ public class Lslist implements Slist {
 
     public void addAfter(Object item) {
         Node<Object> holder = new Node<Object>(item);
-        curr.next.next = holder.next;
+        holder.next = curr.next.next;
         curr.next = holder;
     }
 
@@ -40,7 +40,16 @@ public class Lslist implements Slist {
     }
 
     public boolean prev() {
-        return false;
+        if(curr == head){
+            return false;
+        }
+        else{
+            Node <Object>previous = new Node<Object>(null);
+            previous.next = curr;
+            curr = previous;
+            return true;
+        }
+        
 
     }
 
