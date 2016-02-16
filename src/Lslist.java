@@ -22,9 +22,13 @@ public class Lslist implements Slist {
     }
 
     public void addAfter(Object item) {
-        
         Node<Object> holder = new Node<Object>(item);
-        holder.next = curr.next.next;
+        
+        if(curr.next == null){
+            curr = holder;
+        }
+        curr.next.next = curr.next;
+        holder.next = curr.next;
         curr.next = holder;
         listSize++;
     }
