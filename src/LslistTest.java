@@ -6,7 +6,7 @@ import org.junit.Test;
 public class LslistTest {
 
     @Test
-    public void testClearLargeList() {
+    public void testClearEmptyList() {
         Lslist list = new Lslist();
         list.clear();
         assertEquals(list.length(),0);
