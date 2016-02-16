@@ -1,9 +1,9 @@
 import java.util.LinkedList;
 
 public class Lslist implements Slist {
-    
+
     private Object currentElement;
-    
+
     private Node<Object> head; // Pointer to list header
     private Node<Object> tail; // Pointer to last element
     private Node<Object> curr; // Pointer to current element
@@ -11,12 +11,9 @@ public class Lslist implements Slist {
 
     public Lslist() {
         clear();
+        listSize = 0;
     }
-
-    Lslist(int size) {
-        this();
-    }
-
+    
     // list: <a,b,C,d>
     public void clear() {
         curr = tail = new Node<Object>(null); // Create trailer
@@ -31,21 +28,23 @@ public class Lslist implements Slist {
     }
 
     public void addBefore(Object item) {
-        
+
     }
 
     public void remove() {
-        
+
     }
 
     public boolean prev() {
-        if(curr == head){
+        if (curr == head) {
             return false;
         }
-        else{
-            Node <Object>previous = new Node<Object>(null);
-            previous.next = curr;
-            curr = previous;
+        else {
+            Node<Object> temp = head;
+            while (temp.next != curr) {
+                temp = temp.next;
+            }
+            curr = temp;
             return true;
         }
     }
@@ -61,11 +60,19 @@ public class Lslist implements Slist {
     }
 
     public Object getValue() throws IllegalStateException {
-        if (Lslist.isEmpty()) {
-            throw new IllegalStateException();
-        }
-        else {
-            return currentElement;
-        }
+//        if (Lslist.isEmpty()) {
+//            throw new IllegalStateException();
+//        }
+//        else {
+//            return currentElement;
+//        }
+    }
+    public static void main(String [] args){
+        Lslist list = new Lslist();
+        Object A = new Object();
+        Object B = new Object();
+        list.addAfter(A);
+        list.addAfter(B);
+        System.out.println(list);
     }
 }

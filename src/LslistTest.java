@@ -9,6 +9,7 @@ public class LslistTest {
     public void testClearLargeList() {
         Lslist list = new Lslist();
         list.clear();
+        assertEquals(list.length(),0);
     }
 
 }
