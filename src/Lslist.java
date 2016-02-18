@@ -23,9 +23,9 @@ public class Lslist implements Slist {
     public void addAfter(Object item) {
         Node<Object> holder = new Node<Object>(item);
         if (tail == curr) {
-            head = curr;
-            head.next = tail;
-            head = curr = holder;
+            head.next = holder;
+            holder.next = tail;
+            curr = holder;
             
             listSize++;
         }
