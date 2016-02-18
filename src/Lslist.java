@@ -58,7 +58,7 @@ public class Lslist implements Slist {
     }
 
     public boolean prev() {
-        if (curr == tail) {
+        if (curr == head.next) {
             return false;
         }
         else {
