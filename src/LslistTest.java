@@ -8,23 +8,25 @@ public class LslistTest {
     Object B = new Object();
     Object C = new Object();
     Object D = new Object();
+    
+    Lslist list = new Lslist();
 
     @Test
     public void testClearEmptyList() {
-        Lslist list = new Lslist();
+        
         list.clear();
         assertEquals(list.length(),0);
     }
     @Test
     public void testAddAfterEmptyList() {
-        Lslist list = new Lslist();
+       
         list.addAfter(A);
         
         assertEquals(list.getValue(),A);
     }
     @Test
     public void testAddAfter2Objects(){
-        Lslist list = new Lslist();
+       
         list.addAfter(A);
         list.addAfter(B);
         
@@ -33,13 +35,18 @@ public class LslistTest {
     }
     
     @Test
-    public void testPrev(){
+    public void testPrevEmptyList(){
+        
+        assertFalse(list.prev());
+        assertEquals(list.length(), 0);
+    }
+    
+    @Test
+    public void testPrevWith3Objects(){
         Lslist list = new Lslist();
         list.addAfter(A);
         list.addAfter(B);
         list.addAfter(C);
-        assertTrue(list.prev());
-        assertEquals(list.length(), 3);
     }
     
 
