@@ -62,7 +62,14 @@ public class LslistTest {
         list.prev();
         list.remove();
         assertEquals(list.getValue(), C);
-        
+    }
+    
+    @Test
+    public void removeCurrAtEnd(){
+        list.addAfter(A);
+        list.addAfter(B);
+        list.remove();
+        assertEquals(list.getValue(),A);
     }
     
     @Test
