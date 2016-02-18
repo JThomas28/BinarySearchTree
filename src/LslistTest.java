@@ -68,7 +68,4 @@ public class LslistTest {
         
         assertFalse(list.next());
     }
-    
-    
-
 }
