@@ -51,8 +51,8 @@ public class Lslist implements Slist {
             //set previous element to curr
         }
         else{
-            curr = curr.next;
             curr.next = curr.next.next;
+            curr = curr.next;
         }
         
     }
