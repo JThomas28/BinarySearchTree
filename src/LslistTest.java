@@ -47,18 +47,23 @@ public class LslistTest {
         list.addAfter(A);
         list.addAfter(B);
         list.addAfter(C);
-        assertTrue(list.prev());
+        list.prev();
+        list.prev();
+        
+        assertFalse(list.prev());
         assertEquals(list.length(),3);
     }
     
-//    @Test
-//    public void testRemoveCurrInMiddle(){
-//        list.addAfter(A);
-//        list.addAfter(B);
-//        list.addAfter(C);
-//        //need prev method
-//        
-//    }
+    @Test
+    public void testRemoveCurrInMiddle(){
+        list.addAfter(A);
+        list.addAfter(B);
+        list.addAfter(C);
+        list.prev();
+        list.remove();
+        assert
+        
+    }
     
     @Test
     public void testNextAtEnd(){
