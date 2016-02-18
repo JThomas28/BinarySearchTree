@@ -31,7 +31,8 @@ public class Lslist implements Slist {
         }
         
         else{
-            curr = curr.next;
+            holder.next = curr.next;
+            curr.next = holder;
             curr = holder;
             listSize++;
         }
