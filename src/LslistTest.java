@@ -61,7 +61,7 @@ public class LslistTest {
         list.addAfter(C);
         list.prev();
         list.remove();
-        assert
+        assertEquals(list.getValue(), C);
         
     }
     
