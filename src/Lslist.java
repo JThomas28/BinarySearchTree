@@ -72,7 +72,7 @@ public class Lslist implements Slist {
     }
 
     public boolean next() {
-        if(curr.next == null){
+        if(curr.next == tail){
             return false;
         }
         else{
