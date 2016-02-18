@@ -78,8 +78,6 @@ public class Lslist implements Slist {
             curr.next = curr;
             return true;
         }
-        
-
     }
 
     public int length() {
