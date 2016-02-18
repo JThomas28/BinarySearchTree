@@ -47,6 +47,8 @@ public class LslistTest {
         list.addAfter(A);
         list.addAfter(B);
         list.addAfter(C);
+        AssertTrue(list.prev());
+        AssertEquals(list.length(),3);
     }
     
 
