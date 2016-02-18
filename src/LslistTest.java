@@ -81,6 +81,10 @@ public class LslistTest {
         assertFalse(list.next());
     }
     public void testNextInMiddle(){
+        list.addAfter(A);
+        list.addAfter(B);
+        list.addAfter(C);
+        list.prev();
         
-    }
+        }
 }
