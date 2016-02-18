@@ -35,11 +35,11 @@ public class LslistTest {
     @Test
     public void testPrev(){
         Lslist list = new Lslist();
-        list.addAfter(A);
-        list.addAfter(B);
-        list.addAfter(C);
-        assertTrue(list.prev());
-        assertEquals(list.length(), 3);
+//        list.addAfter(A);
+//        list.addAfter(B);
+//        list.addAfter(C);
+        assertFalse(list.prev());
+        assertEquals(list.length(), 0);
     }
     
 
