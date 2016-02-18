@@ -42,7 +42,7 @@ public class LslistTest {
     }
     
     @Test
-    public void testPrevWith3Objects(){
+    public void testPrevBackToBeginning(){
         
         list.addAfter(A);
         list.addAfter(B);

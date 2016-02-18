@@ -49,6 +49,11 @@ public class Lslist implements Slist {
     public void remove() {
         if(curr.next == null){
             //set previous element to curr
+            Node<Object> temp = head;
+            while (temp.next != curr) {
+                temp = temp.next;
+            }
+            curr = temp;
         }
         else{
             curr.next = curr.next.next;
