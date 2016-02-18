@@ -52,7 +52,7 @@ public class Lslist implements Slist {
         }
         else {
             Node<Object> temp = head;
-            while (temp.next != curr) {
+            while (temp.next.value != curr.value) {
                 temp = temp.next;
             }
             curr = temp;
