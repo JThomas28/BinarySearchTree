@@ -65,7 +65,7 @@ public class LslistTest {
         list.addAfter(A);
         list.addAfter(B);
         list.addAfter(C);
-        
+        assertFalse(list.next());
     }
     
 
