@@ -43,12 +43,12 @@ public class LslistTest {
     
     @Test
     public void testPrevWith3Objects(){
-        Lslist list = new Lslist();
+        
         list.addAfter(A);
         list.addAfter(B);
         list.addAfter(C);
-        AssertTrue(list.prev());
-        AssertEquals(list.length(),3);
+        assertTrue(list.prev());
+        assertEquals(list.length(),3);
     }
     
 

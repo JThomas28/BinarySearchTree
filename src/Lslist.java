@@ -41,9 +41,19 @@ public class Lslist implements Slist {
     public void addBefore(Object item) {
         
     }
-
+    
+    //Remove current item from list
+    //object after curr becomes new curr
+    //if no element after, object before becomes curr
     public void remove() {
-
+        if(curr.next == null){
+            //set previous element to curr
+        }
+        else{
+            curr = curr.next;
+            curr = curr.next.next;
+        }
+        
     }
 
     public boolean prev() {
