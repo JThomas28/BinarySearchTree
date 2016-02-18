@@ -65,7 +65,7 @@ public class LslistTest {
     }
     
     @Test
-    public void removeCurrAtEnd(){
+    public void testremoveCurrAtEnd(){
         list.addAfter(A);
         list.addAfter(B);
         list.remove();
@@ -79,5 +79,8 @@ public class LslistTest {
         list.addAfter(C);
         
         assertFalse(list.next());
+    }
+    public void testNextInMiddle(){
+        
     }
 }
