@@ -51,7 +51,7 @@ public class Lslist implements Slist {
         }
         else{
             curr = curr.next;
-            curr = curr.next.next;
+            curr.next = curr.next.next;
         }
         
     }
