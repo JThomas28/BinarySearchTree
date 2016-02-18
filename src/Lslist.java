@@ -11,9 +11,8 @@ public class Lslist implements Slist {
 
     public Lslist() {
         clear();
-        listSize = 0;
     }
-    
+
     // list: <a,b,C,d>
     public void clear() {
         curr = tail = new Node<Object>(null); // Create trailer
@@ -23,18 +22,24 @@ public class Lslist implements Slist {
 
     public void addAfter(Object item) {
         Node<Object> holder = new Node<Object>(item);
-        
-        if(curr.next == null){
-            curr = holder;
+        if (tail == curr) {
+            head = curr;
+            head.next = tail;
+            head = curr = holder;
+            
+            listSize++;
         }
-        curr.next.next = curr.next;
-        holder.next = curr.next;
-        curr.next = holder;
-        listSize++;
+        
+        else{
+            curr = curr.next;
+            curr = holder;
+            listSize++;
+        }
+        
     }
 
     public void addBefore(Object item) {
-
+        
     }
 
     public void remove() {
@@ -61,24 +66,26 @@ public class Lslist implements Slist {
     }
 
     public int length() {
-        return 0;
+        return listSize;
 
     }
 
     public Object getValue() throws IllegalStateException {
-//        if (Lslist.isEmpty()) {
-//            throw new IllegalStateException();
-//        }
-//        else {
-//            return currentElement;
-//        }
+        if (listSize == 0) {
+            throw new IllegalStateException();
+        }
+        else {
+            currentElement = curr.value;
+            return currentElement;
+        }
     }
-    public static void main(String [] args){
-        Lslist list = new Lslist();
-        Object A = new Object();
-        Object B = new Object();
-        list.addAfter(A);
-        list.addAfter(B);
-        System.out.println(list);
-    }
+
+//    public static void main(String[] args) {
+//        Lslist list = new Lslist();
+//        Object A = new Object();
+//        Object B = new Object();
+//        list.addAfter(A);
+//        list.addAfter(B);
+        //System.out.println(list);
+//    }
 }
