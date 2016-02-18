@@ -51,12 +51,12 @@ public class Lslist implements Slist {
         while (prev.next != curr) {
             prev = prev.next;
         }
+        curr.next = null;
         
         if(curr.next == tail){
             //set previous element to curr
-            
             prev.next = prev.next.next;
-            curr.next = null;
+            
             curr = prev;
             
             curr.next = curr.next.next;
