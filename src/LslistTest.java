@@ -55,12 +55,23 @@ public class LslistTest {
     }
     
     @Test
+    public void testPrevBack1(){
+        list.addAfter(A);
+        list.addAfter(B);
+        list.addAfter(C);
+        
+        assertTrue(list.prev());
+        assertEquals(list.getValue(), B);
+    }
+    
+    @Test
     public void testRemoveCurrInMiddle(){
         list.addAfter(A);
         list.addAfter(B);
         list.addAfter(C);
         list.prev();
         list.remove();
+        
         assertEquals(list.getValue(), C);
     }
     
@@ -69,6 +80,7 @@ public class LslistTest {
         list.addAfter(A);
         list.addAfter(B);
         list.remove();
+        
         assertEquals(list.getValue(),A);
     }
     
