@@ -100,6 +100,7 @@ public class LslistTest {
         list.addAfter(C);
         list.prev();
         list.next();
+        
         assertEquals(list.getValue(), C);
         assertTrue(list.next());
         assertTrue(list.prev());
