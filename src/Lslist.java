@@ -47,13 +47,19 @@ public class Lslist implements Slist {
     //object after curr becomes new curr
     //if no element after, object before becomes curr
     public void remove() {
-        if(curr.next == null){
+        Node<Object> prev = head;
+        while (prev.next != curr) {
+            prev = prev.next;
+        }
+        
+        if(curr.next == tail){
             //set previous element to curr
-            Node<Object> temp = head;
-            while (temp.next != curr) {
-                temp = temp.next;
-            }
-            curr = temp;
+            
+            prev.next = prev.next.next;
+            curr.next = null;
+            curr = prev;
+            
+            curr.next = curr.next.next;
         }
         else{
             curr.next = curr.next.next;
