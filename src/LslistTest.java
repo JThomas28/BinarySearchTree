@@ -80,6 +80,7 @@ public class LslistTest {
         
         assertFalse(list.next());
     }
+    
     @Test
     public void testNextInMiddle(){
         list.addAfter(A);
