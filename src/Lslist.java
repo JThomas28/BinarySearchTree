@@ -71,7 +71,14 @@ public class Lslist implements Slist {
     }
 
     public boolean next() {
-        return false;
+        if(curr.next == null){
+            return false;
+        }
+        else{
+            curr.next = curr;
+            return true;
+        }
+        
 
     }
 
