@@ -16,12 +16,12 @@ public final class Node<T> {
         this( _value, null );
     }
     /**
-     * 
+     * Creates a node of specific type with specific value
      * @param _value
-     * @param _next
+     * @param _next is type 
      */
-    public Node(T _value, Node<T> _next) {
-        value = _value;
-        next  = _next;
-    }
+//    public Node(T _value, Node<T> _next) {
+//        value = _value;
+//        next  = _next;
+//    }
 }
