@@ -17,12 +17,12 @@ public class LslistTest {
      * Tests constructor
      */
     @Test
-    public void testConstructor(){
+    public void testConstructor() {
         Lslist demo = new Lslist();
         Lslist demo2 = new Lslist();
         assertNotSame(demo, demo2);
     }
-    
+
     /**
      * Tests clear of large list
      */
@@ -56,39 +56,40 @@ public class LslistTest {
         assertEquals(list.getValue(), B);
         assertEquals(list.length(), 2);
     }
+
     @Test
-    public void testAddBeforeEmptyList(){
+    public void testAddBeforeEmptyList() {
         list.addBefore(A);
         assertEquals(list.getValue(), A);
     }
-    
+
     @Test
-    public void testAddBeforeCurrInMiddle(){
+    public void testAddBeforeCurrInMiddle() {
         list.addAfter(A);
         list.addAfter(B);
         list.addAfter(C);
         list.prev();
         list.addBefore(D);
         list.next();
-        
-        assertEquals(list.getValue(),B);
+
+        assertEquals(list.getValue(), B);
     }
-    
+
     @Test
-    public void testAddBeforeCurrIsLast(){
+    public void testAddBeforeCurrIsLast() {
         list.addAfter(A);
         list.addAfter(B);
         list.addAfter(C);
         list.addBefore(D);
-        
+
         assertEquals(list.getValue(), D);
     }
-    
+
     @Test
-    public void testAddBeforeCurrAtBeginning(){
+    public void testAddBeforeCurrAtBeginning() {
         list.addAfter(A);
         list.addBefore(B);
-        
+
         assertEquals(list.getValue(), B);
     }
 
@@ -124,7 +125,7 @@ public class LslistTest {
         assertTrue(prev);
         assertEquals(list.getValue(), B);
     }
-    
+
     @Test
     public void testRemoveCurrInMiddle() {
         list.addAfter(A);
@@ -168,20 +169,18 @@ public class LslistTest {
         assertTrue(next);
         assertTrue(prev);
     }
-    
-   
 
     /**
-     * Tests that exception is thrown if 
-     * list is empty and "getValue()" is called
+     * Tests that exception is thrown if list is empty and "getValue()" is
+     * called
      */
     @Test
     public void testGetValueEmptyList() {
         boolean thrown = false;
-        try{
+        try {
             list.getValue();
         }
-        catch(IllegalStateException e){
+        catch (IllegalStateException e) {
             thrown = true;
         }
         assertTrue(thrown);
