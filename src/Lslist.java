@@ -152,6 +152,10 @@ public class Lslist implements Slist {
 
     }
 
+    /**
+     * Returns current Object. Throws exception if list is empty.
+     * @throws IllegalStateException if list is empty
+     */
     public Object getValue() throws IllegalStateException {
         if (listSize == 0) {
             throw new IllegalStateException();
