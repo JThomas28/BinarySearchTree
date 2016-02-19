@@ -12,6 +12,13 @@ public class Lslist implements Slist {
     public Lslist() {
         clear();
     }
+    public void getPreviousNode(){
+        Node<Object> prev = head;
+        while (prev.next != curr) {
+            prev = prev.next;
+        }
+        curr = prev;
+    }
 
     // list: <a,b,C,d>
     public void clear() {
@@ -71,11 +78,12 @@ public class Lslist implements Slist {
             return false;
         }
         else {
-            Node<Object> prev = head;
-            while (prev.next != curr) {
-                prev = prev.next;
-            }
-            curr = prev;
+//            Node<Object> prev = head;
+//            while (prev.next != curr) {
+//                prev = prev.next;
+//            }
+//            curr = prev;
+            getPreviousNode();
             return true;
         }
     }
