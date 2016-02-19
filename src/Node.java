@@ -9,8 +9,8 @@ public final class Node<T> {
         value = _value;
         next  = _next;
     }
-    @Override
-    public String toString() {
-        return "" + value;
-    }
+//    @Override
+//    public String toString() {
+//        return "" + value;
+//    }
 }
