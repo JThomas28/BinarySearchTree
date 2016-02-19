@@ -24,7 +24,7 @@ public class LslistTest {
     }
     
     /**
-     * Tests clear of empty list
+     * Tests clear of large list
      */
     @Test
     public void testClearLargeList() {
