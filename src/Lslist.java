@@ -1,6 +1,7 @@
 /**
- * This class implements methods of Slist class.
- * Implementation class of Slist ADT.
+ * This class implements methods of Slist class. Implementation class of Slist
+ * ADT.
+ * 
  * @author JonathanThomas
  * @version 2/21/2016
  */
@@ -46,7 +47,8 @@ public class Lslist implements Slist {
 
     /**
      * Adds the item to the position in the list after the current element.
-     * @param item -is item to be added to list.
+     * 
+     * @param item :is item to be added to list.
      */
     public void addAfter(Object item) {
         Node<Object> holder = new Node<Object>(item);
@@ -67,22 +69,22 @@ public class Lslist implements Slist {
     }
 
     public void addBefore(Object item) {
-        if(curr == tail){
-            //empty list
+        if (curr == tail) {
+            // empty list
             addAfter(item);
         }
-        else{
-         // get previous node
+        else {
+            // get previous node
             getPreviousNode();
-            
-            //add item between previous node and former current node
+
+            // add item between previous node and former current node
             addAfter(item);
         }
-        
+
     }
 
     public void remove() {
-        
+
         getPreviousNode();
         Node<Object> prev = curr;
         prev.next = prev.next.next;
