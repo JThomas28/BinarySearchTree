@@ -108,6 +108,7 @@ public class Lslist implements Slist {
         Object B = new Object();
         list.addAfter(A);
         list.addAfter(B);
+        list.prev();
         System.out.println(list.getValue());
     }
 }
