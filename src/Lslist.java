@@ -105,9 +105,11 @@ public class Lslist implements Slist {
         if (curr.next == tail) {
             // set previous element to curr
             curr = prev;
+            listSize--;
         }
         else {
             curr = curr.next;
+            listSize--;
         }
 
     }
