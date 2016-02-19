@@ -1,7 +1,14 @@
-
+/**
+ * 
+ * @author JonathanThomas
+ * @version 2/21/2016
+ */
 
 public class Lslist implements Slist {
 
+    /**
+     * variables
+     */
     private Object currentElement;
 
     private Node<Object> head; // Pointer to list header
@@ -9,10 +16,16 @@ public class Lslist implements Slist {
     private Node<Object> curr; // Pointer to current element
     private int listSize; // Size of list
 
+    /**
+     * Constructor. Initializes a head and tail of null.
+     */
     public Lslist() {
         clear();
     }
 
+    /**
+     * Helper method. Sets curr to element before it
+     */
     public void getPreviousNode() {
         Node<Object> prev = head;
         while (prev.next != curr) {
