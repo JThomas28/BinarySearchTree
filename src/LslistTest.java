@@ -3,6 +3,9 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class LslistTest {
+    /**
+     * Fields used in tests
+     */
     Object A = new Object();
     Object B = new Object();
     Object C = new Object();
@@ -160,5 +163,13 @@ public class LslistTest {
             thrown = true;
         }
         assertTrue(thrown);
+    }
+    
+    
+    @Test
+    public void testConstructor(){
+        Lslist demo = new Lslist();
+        Lslist demo2 = new Lslist();
+        assertNotSame(demo, demo2);
     }
 }
