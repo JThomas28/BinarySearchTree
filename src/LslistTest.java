@@ -27,7 +27,12 @@ public class LslistTest {
      * Tests clear of empty list
      */
     @Test
-    public void testClearEmptyList() {
+    public void testClearLargeList() {
+        list.addAfter(A);
+        list.addAfter(B);
+        list.addAfter(C);
+        list.addAfter(D);
+
         list.clear();
         assertEquals(list.length(), 0);
     }
