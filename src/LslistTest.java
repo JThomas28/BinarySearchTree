@@ -75,6 +75,7 @@ public class LslistTest {
         list.remove();
 
         assertEquals(list.getValue(), C);
+        assertEquals(list.length(), 2);
     }
 
     @Test
@@ -84,6 +85,7 @@ public class LslistTest {
         list.remove();
 
         assertEquals(list.getValue(), A);
+        assertEquals(list.length(), 1);
     }
 
     @Test
