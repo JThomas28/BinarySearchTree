@@ -53,9 +53,9 @@ public class Lslist implements Slist {
      */
     public void addAfter(Object item) {
         Node<Object> holder = new Node<Object>(item);
-        
-        //if list is empty, put node with item in it in position
-        //between head and tail nodes
+
+        // if list is empty, put node with item in it in position
+        // between head and tail nodes
         if (tail == curr) {
             head.next = holder;
             holder.next = tail;
@@ -74,7 +74,9 @@ public class Lslist implements Slist {
 
     /**
      * Adds item to list at position right before current node.
-     * @param item -is item to be added
+     * 
+     * @param item
+     *            -is item to be added
      */
     public void addBefore(Object item) {
         if (curr == tail) {
@@ -91,6 +93,9 @@ public class Lslist implements Slist {
 
     }
 
+    /**
+     * Removes current element from list
+     */
     public void remove() {
 
         getPreviousNode();
@@ -107,6 +112,10 @@ public class Lslist implements Slist {
 
     }
 
+    /**
+     * Sets current element to previous element in list.
+     * @return true if there is item before current item, false otherwise
+     */
     public boolean prev() {
         if (curr == head.next || curr == tail) {
             return false;
