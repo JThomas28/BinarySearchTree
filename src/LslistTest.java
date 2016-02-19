@@ -149,7 +149,6 @@ public class LslistTest {
         boolean thrown = false;
         try{
             list.getValue();
-            
         }
         catch(IllegalStateException e){
             thrown = true;
