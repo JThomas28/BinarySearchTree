@@ -9,7 +9,7 @@
 public class Lslist implements Slist {
 
     /**
-     * variables
+     * Fields
      */
     private Object currentElement;
 
@@ -60,10 +60,8 @@ public class Lslist implements Slist {
             head.next = holder;
             holder.next = tail;
             curr = holder;
-
             listSize++;
         }
-
         else {
             holder.next = curr.next;
             curr.next = holder;
@@ -149,7 +147,6 @@ public class Lslist implements Slist {
      */
     public int length() {
         return listSize;
-
     }
 
     /**
