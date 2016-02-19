@@ -107,6 +107,34 @@ public class LslistTest {
 
         assertEquals(list.getValue(), B);
     }
+    
+    /**
+     * Tests remove removes current element when in middle of list
+     */
+    @Test
+    public void testRemoveCurrInMiddle() {
+        list.addAfter(A);
+        list.addAfter(B);
+        list.addAfter(C);
+        list.prev();
+        list.remove();
+
+        assertEquals(list.getValue(), C);
+        assertEquals(list.length(), 2);
+    }
+
+    /**
+     * Tests remove removes curr element and sets it to previous
+     */
+    @Test
+    public void testRemoveCurrAtEnd() {
+        list.addAfter(A);
+        list.addAfter(B);
+        list.remove();
+
+        assertEquals(list.getValue(), A);
+        assertEquals(list.length(), 1);
+    }
 
     /**
      * Tests prev returns false when list is empty
@@ -151,33 +179,8 @@ public class LslistTest {
     }
 
     /**
-     * Tests remove removes current element when in middle of list
+     * Tests next returns false when curr is at end of list
      */
-    @Test
-    public void testRemoveCurrInMiddle() {
-        list.addAfter(A);
-        list.addAfter(B);
-        list.addAfter(C);
-        list.prev();
-        list.remove();
-
-        assertEquals(list.getValue(), C);
-        assertEquals(list.length(), 2);
-    }
-
-    /**
-     * Tests remove removes curr element and sets it to previous
-     */
-    @Test
-    public void testRemoveCurrAtEnd() {
-        list.addAfter(A);
-        list.addAfter(B);
-        list.remove();
-
-        assertEquals(list.getValue(), A);
-        assertEquals(list.length(), 1);
-    }
-
     @Test
     public void testNextAtEnd() {
         list.addAfter(A);
@@ -187,6 +190,9 @@ public class LslistTest {
         assertFalse(list.next());
     }
 
+    /**
+     * Tests next returns true and curr pointer moves to next node
+     */
     @Test
     public void testNextInMiddle() {
         list.addAfter(A);
