@@ -131,6 +131,7 @@ public class Lslist implements Slist {
 
     /**
      * Sets current item to next item in list
+     * 
      * @return false if no item after current, true otherwise.
      */
     public boolean next() {
@@ -145,6 +146,7 @@ public class Lslist implements Slist {
 
     /**
      * Returns list size, which is number of items in list
+     * 
      * @return listSize is size of list
      */
     public int length() {
@@ -154,7 +156,9 @@ public class Lslist implements Slist {
 
     /**
      * Returns current Object. Throws exception if list is empty.
-     * @throws IllegalStateException if list is empty
+     * 
+     * @throws IllegalStateException
+     *             if list is empty
      */
     public Object getValue() throws IllegalStateException {
         if (listSize == 0) {
