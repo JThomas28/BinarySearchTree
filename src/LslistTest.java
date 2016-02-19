@@ -148,7 +148,7 @@ public class LslistTest {
     public void testGetValueEmptyList() {
         boolean thrown;
         try{
-            list.getValue();
+//            list.getValue();
             thrown = false;
         }
         catch(IllegalStateException e){
