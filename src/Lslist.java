@@ -48,7 +48,12 @@ public class Lslist implements Slist {
 
     public void addBefore(Object item) {
         // get previous node
+        if(curr == head.next || curr==tail){
+            
+        }
         getPreviousNode();
+        Node <Object> holder = new Node<Object>(item);
+        
 
     }
 
