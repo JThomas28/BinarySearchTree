@@ -102,12 +102,12 @@ public class Lslist implements Slist {
         }
     }
 
-//    public static void main(String[] args) {
-//        Lslist list = new Lslist();
-//        Object A = new Object();
-//        Object B = new Object();
-//        list.addAfter(A);
-//        list.addAfter(B);
-        //System.out.println(list);
-//    }
+    public static void main(String[] args) {
+        Lslist list = new Lslist();
+        Object A = new Object();
+        Object B = new Object();
+        list.addAfter(A);
+        list.addAfter(B);
+        System.out.println(list);
+    }
 }
