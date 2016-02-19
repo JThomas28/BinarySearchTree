@@ -114,6 +114,7 @@ public class Lslist implements Slist {
 
     /**
      * Sets current element to previous element in list.
+     * 
      * @return false if there is no item before current item, true otherwise
      */
     public boolean prev() {
@@ -126,6 +127,10 @@ public class Lslist implements Slist {
         }
     }
 
+    /**
+     * Sets current item to next item in list
+     * @return false if no item after current, true otherwise.
+     */
     public boolean next() {
         if (curr.next == tail) {
             return false;
@@ -136,6 +141,10 @@ public class Lslist implements Slist {
         }
     }
 
+    /**
+     * Returns list size, which is number of items in list
+     * @return listSize is size of list
+     */
     public int length() {
         return listSize;
 
