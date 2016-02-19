@@ -90,7 +90,6 @@ public class Lslist implements Slist {
             // add item between previous node and former current node
             addAfter(item);
         }
-
     }
 
     /**
@@ -111,7 +110,6 @@ public class Lslist implements Slist {
             curr = curr.next;
             listSize--;
         }
-
     }
 
     /**
