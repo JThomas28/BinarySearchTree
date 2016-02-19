@@ -136,6 +136,9 @@ public class LslistTest {
         assertEquals(list.length(), 3);
     }
 
+    /**
+     * Tests prev returns true after adding items to list
+     */
     @Test
     public void testPrevBack1() {
         list.addAfter(A);
@@ -147,6 +150,9 @@ public class LslistTest {
         assertEquals(list.getValue(), B);
     }
 
+    /**
+     * Tests remove removes current element when in middle of list
+     */
     @Test
     public void testRemoveCurrInMiddle() {
         list.addAfter(A);
@@ -159,6 +165,9 @@ public class LslistTest {
         assertEquals(list.length(), 2);
     }
 
+    /**
+     * Tests remove removes curr element and sets it to previous
+     */
     @Test
     public void testRemoveCurrAtEnd() {
         list.addAfter(A);
