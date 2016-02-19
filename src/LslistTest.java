@@ -56,6 +56,41 @@ public class LslistTest {
         assertEquals(list.getValue(), B);
         assertEquals(list.length(), 2);
     }
+    @Test
+    public void testAddBeforeEmptyList(){
+        list.addBefore(A);
+        assertEquals(list.getValue(), A);
+    }
+    
+    @Test
+    public void testAddBeforeCurrInMiddle(){
+        list.addAfter(A);
+        list.addAfter(B);
+        list.addAfter(C);
+        list.prev();
+        list.addBefore(D);
+        list.next();
+        
+        assertEquals(list.getValue(),B);
+    }
+    
+    @Test
+    public void testAddBeforeCurrIsLast(){
+        list.addAfter(A);
+        list.addAfter(B);
+        list.addAfter(C);
+        list.addBefore(D);
+        
+        assertEquals(list.getValue(), D);
+    }
+    
+    @Test
+    public void testAddBeforeCurrAtBeginning(){
+        list.addAfter(A);
+        list.addBefore(B);
+        
+        assertEquals(list.getValue(), B);
+    }
 
     @Test
     public void testPrevEmptyList() {
@@ -134,41 +169,7 @@ public class LslistTest {
         assertTrue(prev);
     }
     
-    @Test
-    public void testAddBeforeEmptyList(){
-        list.addBefore(A);
-        assertEquals(list.getValue(), A);
-    }
-    
-    @Test
-    public void testAddBeforeCurrInMiddle(){
-        list.addAfter(A);
-        list.addAfter(B);
-        list.addAfter(C);
-        list.prev();
-        list.addBefore(D);
-        list.next();
-        
-        assertEquals(list.getValue(),B);
-    }
-    
-    @Test
-    public void testAddBeforeCurrIsLast(){
-        list.addAfter(A);
-        list.addAfter(B);
-        list.addAfter(C);
-        list.addBefore(D);
-        
-        assertEquals(list.getValue(), D);
-    }
-    
-    @Test
-    public void testAddBeforeCurrAtBeginning(){
-        list.addAfter(A);
-        list.addBefore(B);
-        
-        assertEquals(list.getValue(), B);
-    }
+   
 
     /**
      * Tests that exception is thrown if 
