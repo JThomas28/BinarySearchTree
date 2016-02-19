@@ -147,13 +147,13 @@ public class LslistTest {
     @Test
     public void testGetValueEmptyList() {
         boolean thrown;
-       
+        try{
             list.getValue();
-            if(list.getValue() ==  (IllegalStateException())){
-                thrown = true;
-            }
-            thrownAndCaught = false;
-         
-        assertTrue(thrownAndCaught);
+            thrown = false;
+        }
+        catch(IllegalStateException e){
+            thrown = true;
+        }
+        assertTrue(thrown);
     }
 }
