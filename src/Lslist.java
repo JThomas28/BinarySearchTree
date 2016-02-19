@@ -48,7 +48,8 @@ public class Lslist implements Slist {
     /**
      * Adds the item to the position in the list after the current element.
      * 
-     * @param item :is item to be added to list.
+     * @param item
+     *            -is item to be added to list.
      */
     public void addAfter(Object item) {
         Node<Object> holder = new Node<Object>(item);
