@@ -144,6 +144,10 @@ public class LslistTest {
         assertEquals(list.getValue(), B);
     }
 
+    /**
+     * Tests that exception is thrown if 
+     * list is empty and "getValue()" is called
+     */
     @Test
     public void testGetValueEmptyList() {
         boolean thrown = false;
