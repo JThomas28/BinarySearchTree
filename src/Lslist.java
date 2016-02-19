@@ -12,8 +12,8 @@ public class Lslist implements Slist {
     public Lslist() {
         clear();
     }
-    
-    public void getPreviousNode(){
+
+    public void getPreviousNode() {
         Node<Object> prev = head;
         while (prev.next != curr) {
             prev = prev.next;
@@ -34,41 +34,39 @@ public class Lslist implements Slist {
             head.next = holder;
             holder.next = tail;
             curr = holder;
-            
+
             listSize++;
         }
-        
-        else{
+
+        else {
             holder.next = curr.next;
             curr.next = holder;
             curr = holder;
             listSize++;
         }
     }
-    
+
     public void addBefore(Object item) {
-        //get previous node
+        // get previous node
         getPreviousNode();
-       
-        
+
     }
-    
-    
+
     public void remove() {
         Node<Object> prev = head;
         while (prev.next != curr) {
             prev = prev.next;
         }
         prev.next = prev.next.next;
-        
-        if(curr.next == tail){
-            //set previous element to curr
+
+        if (curr.next == tail) {
+            // set previous element to curr
             curr = prev;
         }
-        else{
+        else {
             curr = curr.next;
         }
-        
+
     }
 
     public boolean prev() {
@@ -76,21 +74,21 @@ public class Lslist implements Slist {
             return false;
         }
         else {
-//            Node<Object> prev = head;
-//            while (prev.next != curr) {
-//                prev = prev.next;
-//            }
-//            curr = prev;
+            // Node<Object> prev = head;
+            // while (prev.next != curr) {
+            // prev = prev.next;
+            // }
+            // curr = prev;
             getPreviousNode();
             return true;
         }
     }
 
     public boolean next() {
-        if(curr.next == tail){
+        if (curr.next == tail) {
             return false;
         }
-        else{
+        else {
             curr = curr.next;
             return true;
         }
