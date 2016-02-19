@@ -147,6 +147,7 @@ public class LslistTest {
     @Test
     public void testGetValueEmptyList() {
         boolean thrown;
+        list.getValue();
         try{
 //            list.getValue();
             thrown = false;
