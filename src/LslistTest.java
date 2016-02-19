@@ -13,12 +13,28 @@ public class LslistTest {
 
     Lslist list = new Lslist();
 
+    /**
+     * Tests constructor
+     */
+    @Test
+    public void testConstructor(){
+        Lslist demo = new Lslist();
+        Lslist demo2 = new Lslist();
+        assertNotSame(demo, demo2);
+    }
+    
+    /**
+     * Tests clear of empty list
+     */
     @Test
     public void testClearEmptyList() {
         list.clear();
         assertEquals(list.length(), 0);
     }
 
+    /**
+     * Tests addAfter works with empty list
+     */
     @Test
     public void testAddAfterEmptyList() {
         list.addAfter(A);
@@ -82,7 +98,7 @@ public class LslistTest {
     }
 
     @Test
-    public void testremoveCurrAtEnd() {
+    public void testRemoveCurrAtEnd() {
         list.addAfter(A);
         list.addAfter(B);
         list.remove();
@@ -163,13 +179,5 @@ public class LslistTest {
             thrown = true;
         }
         assertTrue(thrown);
-    }
-    
-    
-    @Test
-    public void testConstructor(){
-        Lslist demo = new Lslist();
-        Lslist demo2 = new Lslist();
-        assertNotSame(demo, demo2);
     }
 }
