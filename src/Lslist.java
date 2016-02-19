@@ -36,9 +36,8 @@ public class Lslist implements Slist {
             curr = holder;
             listSize++;
         }
-        
     }
-
+    
     public void addBefore(Object item) {
         //get previous node
         Node<Object> prev = head;
