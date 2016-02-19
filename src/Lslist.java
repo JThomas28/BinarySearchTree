@@ -1,5 +1,6 @@
 /**
- * 
+ * This class implements methods of Slist class.
+ * Implementation class of Slist ADT.
  * @author JonathanThomas
  * @version 2/21/2016
  */
@@ -34,13 +35,19 @@ public class Lslist implements Slist {
         curr = prev;
     }
 
-    // list: <a,b,C,d>
+    /**
+     * Empties list. Sets a head and tail node, both equal to null.
+     */
     public void clear() {
         curr = tail = new Node<Object>(null); // Create trailer
         head = new Node<Object>(tail); // Create header
         listSize = 0;
     }
 
+    /**
+     * Adds the item to the position in the list after the current element.
+     * @param item -is item to be added to list.
+     */
     public void addAfter(Object item) {
         Node<Object> holder = new Node<Object>(item);
         if (tail == curr) {
