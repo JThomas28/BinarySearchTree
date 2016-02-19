@@ -19,7 +19,6 @@ public class LslistTest {
     }
     @Test
     public void testAddAfterEmptyList() {
-       
         list.addAfter(A);
         
         assertEquals(list.getValue(),A);
