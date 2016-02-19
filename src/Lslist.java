@@ -114,7 +114,7 @@ public class Lslist implements Slist {
 
     /**
      * Sets current element to previous element in list.
-     * @return true if there is item before current item, false otherwise
+     * @return false if there is no item before current item, true otherwise
      */
     public boolean prev() {
         if (curr == head.next || curr == tail) {
