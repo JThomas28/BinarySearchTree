@@ -146,11 +146,10 @@ public class LslistTest {
 
     @Test
     public void testGetValueEmptyList() {
-        boolean thrown;
-        list.getValue();
+        boolean thrown = false;
         try{
-//            list.getValue();
-            thrown = false;
+            list.getValue();
+            
         }
         catch(IllegalStateException e){
             thrown = true;
