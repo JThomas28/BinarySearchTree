@@ -12,6 +12,7 @@ public class Lslist implements Slist {
     public Lslist() {
         clear();
     }
+    
     public void getPreviousNode(){
         Node<Object> prev = head;
         while (prev.next != curr) {
@@ -47,11 +48,8 @@ public class Lslist implements Slist {
     
     public void addBefore(Object item) {
         //get previous node
-        Node<Object> prev = head;
-        while (prev.next != curr) {
-            prev = prev.next;
-        }
-        curr = prev;
+        getPreviousNode();
+       
         
     }
     
