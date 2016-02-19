@@ -78,13 +78,13 @@ public class Lslist implements Slist {
     }
 
     public boolean next() {
-        if(curr.next == tail){
-            return false;
-        }
-        else{
+        //if(curr.next == tail){
+        //    return false;
+       // }
+        //else{
             curr = curr.next;
             return true;
-        }
+       // }
     }
 
     public int length() {
