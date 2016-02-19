@@ -82,7 +82,7 @@ public class Lslist implements Slist {
             return false;
         }
         else{
-            curr.next = curr;
+            curr = curr.next;
             return true;
         }
     }
