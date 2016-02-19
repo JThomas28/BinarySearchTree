@@ -40,12 +40,16 @@ public class Lslist implements Slist {
     }
 
     public void addBefore(Object item) {
+        //get previous node
+        Node<Object> prev = head;
+        while (prev.next != curr) {
+            prev = prev.next;
+        }
+        curr = prev;
         
     }
     
-    //Remove current item from list
-    //object after curr becomes new curr
-    //if no element after, object before becomes curr
+    
     public void remove() {
         Node<Object> prev = head;
         while (prev.next != curr) {
@@ -68,11 +72,11 @@ public class Lslist implements Slist {
             return false;
         }
         else {
-            Node<Object> temp = head;
-            while (temp.next != curr) {
-                temp = temp.next;
+            Node<Object> prev = head;
+            while (prev.next != curr) {
+                prev = prev.next;
             }
-            curr = temp;
+            curr = prev;
             return true;
         }
     }

@@ -1,4 +1,5 @@
 import static org.junit.Assert.*;
+import junit.framework.Assert;
 
 import org.junit.Test;
 
@@ -109,7 +110,14 @@ public class LslistTest {
     
     @Test
     public void testGetValueEmptyList(){
-        expected = IllegalStateException.class;
-        assetEquals(expected, list.getValue());
+        boolean thrownAndCaught = false;
+        try{
+            list.getValue();
+            fail("Expected exception to be thrown");
+        }
+        catch(IllegalStateException e){
+            thrownAndCaught = true;
+        }
+        assertTrue(thrownAndCaught);
     }
 }
