@@ -1,5 +1,4 @@
 import static org.junit.Assert.*;
-import junit.framework.Assert;
 
 import org.junit.Test;
 
@@ -66,7 +65,7 @@ public class LslistTest {
         assertTrue(prev);
         assertEquals(list.getValue(), B);
     }
-
+    
     @Test
     public void testRemoveCurrInMiddle() {
         list.addAfter(A);
@@ -117,29 +116,44 @@ public class LslistTest {
     
     @Test
     public void testAddBeforeCurrInMiddle(){
+        list.addAfter(A);
+        list.addAfter(B);
+        list.addAfter(C);
+        list.prev();
+        list.addBefore(D);
+        list.next();
         
+        assertEquals(list.getValue(),B);
     }
     
     @Test
     public void testAddBeforeCurrIsLast(){
+        list.addAfter(A);
+        list.addAfter(B);
+        list.addAfter(C);
+        list.addBefore(D);
         
+        assertEquals(list.getValue(), D);
     }
     
     @Test
     public void testAddBeforeCurrAtBeginning(){
+        list.addAfter(A);
+        list.addBefore(B);
         
+        assertEquals(list.getValue(), B);
     }
 
     @Test
     public void testGetValueEmptyList() {
-        boolean thrownAndCaught = false;
-        try {
+        boolean thrown;
+       
             list.getValue();
-            fail("Expected exception to be thrown");
-        }
-        catch (IllegalStateException e) {
-            thrownAndCaught = true;
-        }
+            if(list.getValue() ==  (IllegalStateException())){
+                thrown = true;
+            }
+            thrownAndCaught = false;
+         
         assertTrue(thrownAndCaught);
     }
 }
