@@ -47,6 +47,9 @@ public class LslistTest {
         assertEquals(list.getValue(), A);
     }
 
+    /**
+     * Tests addAfter works adding after an object
+     */
     @Test
     public void testAddAfter2Objects() {
 
@@ -57,12 +60,18 @@ public class LslistTest {
         assertEquals(list.length(), 2);
     }
 
+    /**
+     * Tests add before works on empty list
+     */
     @Test
     public void testAddBeforeEmptyList() {
         list.addBefore(A);
         assertEquals(list.getValue(), A);
     }
 
+    /**
+     * Tests add before works when curr is in middle of list
+     */
     @Test
     public void testAddBeforeCurrInMiddle() {
         list.addAfter(A);
@@ -75,6 +84,9 @@ public class LslistTest {
         assertEquals(list.getValue(), B);
     }
 
+    /**
+     * Tests add before works when curr is at end of list
+     */
     @Test
     public void testAddBeforeCurrIsLast() {
         list.addAfter(A);
@@ -85,6 +97,9 @@ public class LslistTest {
         assertEquals(list.getValue(), D);
     }
 
+    /**
+     * Tests add before works when curr is first item in list
+     */
     @Test
     public void testAddBeforeCurrAtBeginning() {
         list.addAfter(A);
@@ -93,6 +108,9 @@ public class LslistTest {
         assertEquals(list.getValue(), B);
     }
 
+    /**
+     * Tests prev returns false when list is empty
+     */
     @Test
     public void testPrevEmptyList() {
 
@@ -100,6 +118,9 @@ public class LslistTest {
         assertEquals(list.length(), 0);
     }
 
+    /**
+     * Tests prev returns false after cycling through list to beginning
+     */
     @Test
     public void testPrevBackToBeginning() {
 
