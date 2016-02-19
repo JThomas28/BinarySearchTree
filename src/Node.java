@@ -2,17 +2,17 @@
  * Creates nodes for linked lists.
  * @author JonathanThomas
  * @version 2/21/2016
- * @param <Object> is type of node
+ * @param <T> is type of node
  */
-public final class Node<Object> {
-    public final Object       value;
-    public       Node<Object> next;
+public final class Node<T> {
+    public final T       value;
+    public       Node<T> next;
     
     /**
      * Creates Node that holds value passed in and null pointer
      * @param _value is value of the node
      */
-    public Node(Object _value) {
+    public Node(T _value) {
         this( _value, null );
     }
     /**
@@ -20,7 +20,7 @@ public final class Node<Object> {
      * @param _value is value of node
      * @param _next is pointer
      */
-    public Node(Object _value, Node<Object> _next) {
+    public Node(T _value, Node<T> _next) {
         value = _value;
         next  = _next;
     }
