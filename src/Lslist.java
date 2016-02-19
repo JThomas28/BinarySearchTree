@@ -101,14 +101,4 @@ public class Lslist implements Slist {
             return currentElement;
         }
     }
-
-    public static void main(String[] args) {
-        Lslist list = new Lslist();
-        Object A = new Object();
-        Object B = new Object();
-        list.addAfter(A);
-        list.addAfter(B);
-        list.prev();
-        System.out.println(list.getValue());
-    }
 }

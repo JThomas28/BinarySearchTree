@@ -13,7 +13,6 @@ public class LslistTest {
 
     @Test
     public void testClearEmptyList() {
-        
         list.clear();
         assertEquals(list.length(),0);
     }
@@ -48,8 +47,10 @@ public class LslistTest {
         list.addAfter(C);
         list.prev();
         list.prev();
+        boolean prevAtBeginning = list.prev();
         
-        assertFalse(list.prev());
+        assertFalse(prevAtBeginning);
+        
         assertEquals(list.length(),3);
     }
     
@@ -58,8 +59,9 @@ public class LslistTest {
         list.addAfter(A);
         list.addAfter(B);
         list.addAfter(C);
+        boolean prev = list.prev();
         
-        assertTrue(list.prev());
+        assertTrue(prev);
         assertEquals(list.getValue(), B);
     }
     
@@ -97,11 +99,17 @@ public class LslistTest {
         list.addAfter(A);
         list.addAfter(B);
         list.addAfter(C);
-        list.prev();
-        list.next();
+        boolean next = list.prev();
+        boolean prev = list.next();
         
         assertEquals(list.getValue(), C);
-        assertTrue(list.next());
-        assertTrue(list.prev());
+        assertTrue(next);
+        assertTrue(prev);
         }
+    
+    @Test
+    public void testGetValueEmptyList(){
+        expected = IllegalStateException.class;
+        assetEquals(expected, list.getValue());
+    }
 }
