@@ -49,20 +49,20 @@ public class Lslist implements Slist {
     public void addBefore(Object item) {
         if(curr == tail){
             //empty list
-            
+            addAfter(item);
         }
-        // get previous node
-        getPreviousNode();
+        else{
+         // get previous node
+            getPreviousNode();
+            
+            //add item between previous node and former current node
+            addAfter(item);
+        }
         
-        //add item between previous node and former current node
-        addAfter(item);
     }
 
     public void remove() {
         
-//        while (prev.next != curr) {
-//            prev = prev.next;
-//        }
         getPreviousNode();
         Node<Object> prev = curr;
         prev.next = prev.next.next;
