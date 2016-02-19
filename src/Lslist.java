@@ -72,7 +72,7 @@ public class Lslist implements Slist {
             while (temp.next != curr) {
                 temp = temp.next;
             }
-            curr = temp;
+            temp = curr;
             return true;
         }
     }
