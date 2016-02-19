@@ -108,6 +108,27 @@ public class LslistTest {
         assertTrue(next);
         assertTrue(prev);
     }
+    
+    @Test
+    public void testAddBeforeEmptyList(){
+        list.addBefore(A);
+        assertEquals(list.getValue(), A);
+    }
+    
+    @Test
+    public void testAddBeforeCurrInMiddle(){
+        
+    }
+    
+    @Test
+    public void testAddBeforeCurrIsLast(){
+        
+    }
+    
+    @Test
+    public void testAddBeforeCurrAtBeginning(){
+        
+    }
 
     @Test
     public void testGetValueEmptyList() {

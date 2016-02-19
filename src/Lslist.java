@@ -47,21 +47,24 @@ public class Lslist implements Slist {
     }
 
     public void addBefore(Object item) {
-        // get previous node
-        if(curr == head.next || curr==tail){
+        if(curr == tail){
+            //empty list
             
         }
+        // get previous node
         getPreviousNode();
-        Node <Object> holder = new Node<Object>(item);
         
-
+        //add item between previous node and former current node
+        addAfter(item);
     }
 
     public void remove() {
-        Node<Object> prev = head;
-        while (prev.next != curr) {
-            prev = prev.next;
-        }
+        
+//        while (prev.next != curr) {
+//            prev = prev.next;
+//        }
+        getPreviousNode();
+        Node<Object> prev = curr;
         prev.next = prev.next.next;
 
         if (curr.next == tail) {
@@ -79,11 +82,6 @@ public class Lslist implements Slist {
             return false;
         }
         else {
-            // Node<Object> prev = head;
-            // while (prev.next != curr) {
-            // prev = prev.next;
-            // }
-            // curr = prev;
             getPreviousNode();
             return true;
         }
