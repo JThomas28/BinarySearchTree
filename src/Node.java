@@ -7,29 +7,36 @@
  *            is type of node
  */
 public final class Node<T> {
+    /**
+     * Field for node value
+     */
     public final T value;
+    
+    /**
+     * field for node pointer
+     */
     public Node<T> next;
 
     /**
      * Creates Node that holds value passed in and null pointer
      * 
-     * @param _value
+     * @param nodeVal
      *            is value of the node
      */
-    public Node(T _value) {
-        this(_value, null);
+    public Node(T nodeVal) {
+        this(nodeVal, null);
     }
 
     /**
      * Creates a node with specific value and pointer
      * 
-     * @param _value
+     * @param nodeVal
      *            is value of node
-     * @param _next
+     * @param nextVal
      *            is pointer
      */
-    public Node(T _value, Node<T> _next) {
-        value = _value;
-        next = _next;
+    public Node(T nodeVal, Node<T> nextVal) {
+        value = nodeVal;
+        next = nextVal;
     }
 }

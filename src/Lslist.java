@@ -40,7 +40,8 @@ public class Lslist implements Slist {
      * Empties list. Sets a head and tail node, both equal to null.
      */
     public void clear() {
-        curr = tail = new Node<Object>(null); // Create trailer
+        tail = new Node<Object>(null); // Create trailer
+        curr = tail;
         head = new Node<Object>(tail); // Create header
         listSize = 0;
     }
@@ -49,7 +50,7 @@ public class Lslist implements Slist {
      * Adds the item to the position in the list after the current element.
      * 
      * @param item
-     *            -is item to be added to list.
+     *            -is item to be added to list
      */
     public void addAfter(Object item) {
         Node<Object> holder = new Node<Object>(item);
@@ -154,6 +155,7 @@ public class Lslist implements Slist {
      * 
      * @throws IllegalStateException
      *             if list is empty
+     * @return currentElement -is element curr is pointing to
      */
     public Object getValue() throws IllegalStateException {
         if (listSize == 0) {
